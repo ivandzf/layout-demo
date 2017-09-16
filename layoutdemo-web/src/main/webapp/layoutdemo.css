@@ -1,0 +1,263 @@
+/** Add css rules here for your application. */
+.label-bold {
+	font-weight: bold;
+}
+
+.label-8 {
+	font-family: 'Arial';
+	font-size: 8pt;
+}
+
+.label-8-bold {
+	font-family: 'Arial';
+	font-size: 8pt;
+	font-weight: bold;
+}
+
+.label-10 {
+	font-family: 'Arial';
+	font-size: 10pt;
+}
+
+.label-10-bold {
+	font-family: 'Arial';
+	font-size: 10pt;
+	font-weight: bold;
+}
+
+.label-12-bold {
+	font-family: 'Arial';
+	font-size: 12pt;
+	font-weight: bold;
+}
+
+.label-14-bold {
+	font-family: 'Arial';
+	font-size: 14pt;
+	font-weight: bold;
+}
+
+.label-16-bold {
+	font-family: 'Arial';
+	font-size: 16pt;
+	font-weight: bold;
+	alignment-adjust: central;
+	padding-top: 10px;
+}
+
+/** Example rules used by the template application (remove for your app) */
+h1 {
+	font-size: 2em;
+	font-weight: bold;
+	color: #777777;
+	margin: 40px 5px 70px;
+	text-align: center;
+}
+
+.app-title-header {
+	font-size: 1.1em;
+	color: #e0e0e0;
+	padding-top: 2px;
+	text-align: left;
+	padding-left: 15px;
+	font-family: Calibri;
+	line-height:32px;
+}
+
+.app-title-login {
+	font-family: 'Calibri';
+	font-size: 18pt;
+	font-weight: bold;
+	margin-bottom: 20px;
+	color: #333;
+	text-align: center;
+}
+
+.info-user {
+	font-size: 0.75em;
+	color: #777777;
+	padding-top: 5px;
+	text-align: right;
+	padding-right: 20px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.paddedText {
+	font-size: 11px;
+	padding: 5px;
+}
+
+/** Most GWT widgets already have a style name defined */
+.gwt-DialogBox {
+	width: 400px;
+}
+
+.dialogVPanel {
+	margin: 5px;
+}
+
+.serverResponseLabelError {
+	color: red;
+}
+
+/** Set ids using widget.getElement().setId("idOfElement") */
+#closeButton {
+	margin: 15px 6px 6px;
+}
+.login-image {
+	background: url('login.jpg') no-repeat;
+}
+
+.login {
+	padding-right: 54px;
+	padding-bottom:10px;
+	padding-top:5px;
+}
+div.username div.GARVD-2BPJC{
+    padding:5px;
+}
+div.password div.GARVD-2BPJC{
+    padding:5px;
+}
+
+.no-wrap {
+	white-space: normal;
+}
+
+.red-row {
+	color: red;
+}
+
+.black-row {
+	color: black;
+}
+
+.textboxStyle input {
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-ms-border-radius: 3px;
+	-o-border-radius: 3px;
+	border-radius: 3px;
+	-webkit-box-shadow: 0 1px 0 #fff, 0 -2px 5px rgba(0, 0, 0, 0.08) inset;
+	-moz-box-shadow: 0 1px 0 #fff, 0 -2px 5px rgba(0, 0, 0, 0.08) inset;
+	-ms-box-shadow: 0 1px 0 #fff, 0 -2px 5px rgba(0, 0, 0, 0.08) inset;
+	-o-box-shadow: 0 1px 0 #fff, 0 -2px 5px rgba(0, 0, 0, 0.08) inset;
+	box-shadow: 0 1px 0 #fff, 0 -2px 5px rgba(0, 0, 0, 0.08) inset;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-ms-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+	border: 1px solid #c8c8c8;
+	color: #777;
+	font: 13px Helvetica, Arial, sans-serif;
+	margin-bottom: 10px;
+	padding: 15px 10px 15px 40px;
+	width: 100%;
+	margin-left: -20px;
+}
+
+.textboxStyle input[type="text"] {
+	background: #eae7e7 url('images/8bcLQqF.png') no-repeat;
+	background-position: 5px 13px !important;
+}
+
+.textboxStyle input[type="password"] {
+	background: #eae7e7 url('images/8bcLQqF.png') no-repeat;
+	background-position: 5px -50px !important;
+}
+
+.textboxStyle input[type="text"]:focus {
+	background: #ffffff url('images/8bcLQqF.png') no-repeat;
+	background-position: 5px 13px !important;
+	border: 1px solid skyblue;
+}
+
+.textboxStyle input[type="password"]:focus {
+	background: #ffffff url('images/8bcLQqF.png') no-repeat;
+	background-position: 5px -50px !important;
+	border: 1px solid skyblue;
+}
+
+.map {
+	background: url('images/bg.jpg') no-repeat center center fixed;
+	background-size: 100% auto;
+}
+
+.form {
+	width: 450px;
+	background: white;
+	margin: 0 auto;
+	border-radius: 6px;
+	-moz-border-radius: 6px;
+	-webikit-border-radius: 6px;
+	margin-top: 10%;
+	font-family: 'Tahoma';
+	box-shadow: 3px 3px 10px #333;
+}
+
+.body-form {
+	padding: 20px;
+}
+
+.capital {
+	text-transform: uppercase;
+}
+
+.copyright {
+	font-size: 8pt;
+	font-family: 'Calibri';
+}
+
+.header-form {
+	background: #7abcff; /* Old browsers */
+	background: -moz-linear-gradient(top, #7abcff 0%, #60abf8 44%, #4096ee 100%);
+	/* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #7abcff),
+		color-stop(44%, #60abf8), color-stop(100%, #4096ee));
+	/* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #7abcff 0%, #60abf8 44%, #4096ee 100%);
+	/* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #7abcff 0%, #60abf8 44%, #4096ee 100%);
+	/* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #7abcff 0%, #60abf8 44%, #4096ee 100%);
+	/* IE10+ */
+	background: linear-gradient(to bottom, #7abcff 0%, #60abf8 44%, #4096ee 100%);
+	/* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7abcff',
+		endColorstr='#4096ee', GradientType=0); /* IE6-9 */
+	border-radius: 6px 6px 0px 0px;
+	-moz-border-radius: 6px 6px 0px 0px;
+	-webikit-border-radius: 6px 6px 0px 0px;
+	height: 40px;
+}
+
+.header-form h1 {
+	padding: 0;
+	margin: 0;
+	color: #fff;
+	padding: 5px 20px;
+	font-weight: normal;
+	font-size: 18pt;
+}
+
+.demo-header {
+	/*background: url("images/hd-bg.gif") repeat-x scroll 0 70% #1E4176;*/
+	background: #34495E;
+	border: 0 none;
+	padding-left: 0px;
+}
+
+.auto-height {
+	height: auto !important;
+	overflow: visible !important;
+}
+
+td.GP34Q33F0C.right div.GP34Q33H0C {
+	text-align: right;
+	font-weight: bold;
+}
+/*
+.GP34Q33HT .GP34Q33JT {
+    text-align:right;
+}*/

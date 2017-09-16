@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" type="JAVA_MODULE" version="4">
+    <component name="FacetManager">
+        <facet type="Spring" name="Spring">
+          <configuration />
+        </facet>
+        <facet type="web" name="Web">
+          <configuration>
+            <descriptors>
+              <deploymentDescriptor name="context.xml" url="file://$MODULE_DIR$/src/main/webapp/META-INF/context.xml" />
+              <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/src/main/webapp/WEB-INF/web.xml" />
+            </descriptors>
+            <webroots>
+              <root url="file://$MODULE_DIR$/src/main/webapp" relative="/" />
+            </webroots>
+            <sourceRoots>
+              <root url="file://$MODULE_DIR$/src/main/java" />
+              <root url="file://$MODULE_DIR$/src/main/resources" />
+            </sourceRoots>
+          </configuration>
+        </facet>
+        <facet type="gwt" name="GWT">
+          <configuration>
+            <setting name="additionalCompilerParameters" value="-Djava.io.tmpdir=D:/greenlabsfactory-trial-project/trialproject-web/target/tmp" />
+            <setting name="compilerParameters" value="-logLevel INFO -optimize 9 -localWorkers 4 -XdisableRunAsync" />
+            <setting name="compilerMaxHeapSize" value="2688" />
+            <setting name="gwtScriptOutputStyle" value="PRETTY" />
+            <setting name="gwtSdkUrl" value="file://$MAVEN_REPOSITORY$/com/google/gwt/gwt-dev/2.6.1/" />
+            <setting name="gwtSdkType" value="maven" />
+            <setting name="webFacet" value="Web" />
+          </configuration>
+        </facet>
+      </component>
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_7">
+    <output url="file://$MODULE_DIR$/target/layoutdemo/WEB-INF/classes" />
+    <output-test url="file://$MODULE_DIR$/target/test-classes" />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/main/resources" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/test/java" isTestSource="true" />
+      <excludeFolder url="file://$MODULE_DIR$/target" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: javax.servlet:javax.servlet-api:3.1.0" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: javax.servlet.jsp:jsp-api:2.1" level="project" />
+    <orderEntry type="library" name="Maven: javax.servlet:jstl:1.2" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: com.google.gwt:gwt-servlet:2.6.1" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: com.google.gwt:gwt-user:2.6.1" level="project" />
+    <orderEntry type="library" name="Maven: javax.validation:validation-api:1.0.0.GA" level="project" />
+    <orderEntry type="library" name="Maven: javax.validation:validation-api:sources:1.0.0.GA" level="project" />
+    <orderEntry type="library" name="Maven: org.json:json:20090211" level="project" />
+    <orderEntry type="library" name="Maven: com.google.gwt:gwt-codeserver:2.6.1" level="project" />
+    <orderEntry type="library" name="Maven: com.google.gwt:gwt-dev:2.6.1" level="project" />
+    <orderEntry type="library" name="Maven: com.sencha.gxt:gxt:3.1.0" level="project" />
+    <orderEntry type="library" name="Maven: com.sencha.gxt:gxt-theme-neptune:3.1.0" level="project" />
+  </component>
+</module>
