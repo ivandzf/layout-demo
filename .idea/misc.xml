@@ -9,6 +9,8 @@
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/comgreenlabslayoutdemoweb/pom.xml" />
+        <option value="$PROJECT_DIR$/layoutdemoc-oba/pom.xml" />
+        <option value="$PROJECT_DIR$/layoutdemocore/pom.xml" />
         <option value="$PROJECT_DIR$/web/pom.xml" />
       </set>
     </option>

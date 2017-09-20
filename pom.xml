@@ -10,10 +10,19 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>layoutdemo-web</module>
+        <module>layoutdemo-core</module>
+        <module>layoutdemo-ws</module>
     </modules>
 
-    <build>
+    <properties>
+        <build.profile.id>dev</build.profile.id>
+        <webappDirectory>${project.build.directory}/${project.build.finalName}</webappDirectory>
+        <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <spring.version>4.1.7.RELEASE</spring.version>
+    </properties>
 
+    <build>
         <resources>
             <resource>
                 <directory>src/main/resources</directory>

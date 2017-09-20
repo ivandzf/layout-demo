@@ -1,15 +1,13 @@
 package com.greenlabs.layoutdemo.web.client;
 
 import com.google.gwt.core.client.EntryPoint;
-import com.google.gwt.user.client.ui.IsWidget;
-import com.google.gwt.user.client.ui.RootPanel;
-import com.google.gwt.user.client.ui.Widget;
+import com.google.gwt.event.logical.shared.ResizeEvent;
+import com.google.gwt.event.logical.shared.ResizeHandler;
+import com.google.gwt.user.client.ui.*;
 import com.sencha.gxt.core.client.util.Margins;
 import com.sencha.gxt.widget.core.client.ContentPanel;
 import com.sencha.gxt.widget.core.client.button.TextButton;
-import com.sencha.gxt.widget.core.client.container.BorderLayoutContainer;
-import com.sencha.gxt.widget.core.client.container.MarginData;
-import com.sencha.gxt.widget.core.client.container.Viewport;
+import com.sencha.gxt.widget.core.client.container.*;
 
 
 /**
@@ -17,13 +15,12 @@ import com.sencha.gxt.widget.core.client.container.Viewport;
  **/
 public class View implements IsWidget,EntryPoint {
 
-    private final int MIN_HEIGHT = 480;
-    private final int MIN_WIDTH = 720;
-
     private BorderLayoutContainer widget;
+    private LayoutPanel northPanel;
 
     @Override
     public void onModuleLoad() {
+
         Viewport viewport = new Viewport();
         viewport.add(this.asWidget());
         RootPanel.get().add(viewport);
@@ -31,6 +28,27 @@ public class View implements IsWidget,EntryPoint {
 
     @Override
     public Widget asWidget() {
+
+        northPanel = new LayoutPanel();
+
+        final Label title = new Label();
+        title.setStyleName("app-title-header");
+
+        final HorizontalLayoutContainer hBoxLayoutContainer = new HorizontalLayoutContainer();
+        hBoxLayoutContainer.setStyleName("demo-header");
+
+        hBoxLayoutContainer.addResizeHandler(new ResizeHandler() {
+            @Override
+            public void onResize(ResizeEvent resizeEvent) {
+                hBoxLayoutContainer.clear();
+                hBoxLayoutContainer.add(title, new HorizontalLayoutContainer.HorizontalLayoutData(200,0));
+
+            }
+        });
+
+        hBoxLayoutContainer.setLayoutData(new HorizontalLayoutContainer.HorizontalLayoutData());
+
+        northPanel.add(hBoxLayoutContainer);
 
         ContentPanel west = new ContentPanel();
         west.setHeadingText("Navigation");
@@ -46,8 +64,12 @@ public class View implements IsWidget,EntryPoint {
         MarginData centerData = new MarginData();
         centerData.setMargins(new Margins(10,10,10,0));
 
+        title.setText("Greenlabs Digital Signage [DEVELOPMENT]");
+
         widget = new BorderLayoutContainer();
         widget.setBorders(true);
+
+        widget.setNorthWidget(northPanel, new BorderLayoutContainer.BorderLayoutData(38));
         widget.setWestWidget(west, westData);
         widget.setCenterWidget(center, centerData);
 

@@ -6,12 +6,17 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="layoutdemo-core" />
         <module name="layoutdemo-web" />
+        <module name="layoutdemo-ws" />
+        <module name="layoutdemocore" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="layout-demo" target="1.5" />
+      <module name="layoutdemo-core" target="1.8" />
       <module name="layoutdemo-web" target="1.7" />
+      <module name="layoutdemo-ws" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>
