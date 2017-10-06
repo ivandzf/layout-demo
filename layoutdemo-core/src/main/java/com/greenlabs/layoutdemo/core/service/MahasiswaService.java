@@ -9,6 +9,8 @@ import com.greenlabs.layoutdemo.core.common.Result;
 import org.springframework.transaction.TransactionStatus;
 import org.springframework.transaction.support.TransactionCallback;
 
+import java.util.List;
+
 /**
  * Created by Ivan-TI on 9/20/2017
  **/
@@ -52,5 +54,18 @@ public class MahasiswaService extends BaseService {
             }
         });
     }
+
+    public List<Mahasiswa> find(Mahasiswa mahasiswa, int offset, int limit){
+        return mahasiswaDAO.find(mahasiswa,offset,limit);
+    }
+
+    public Mahasiswa findById(Long id) {
+        return mahasiswaDAO.findById(id);
+    }
+
+    public int count(Mahasiswa mahasiswa){
+        return mahasiswaDAO.count(mahasiswa);
+    }
+
 
 }

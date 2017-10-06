@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to='layoutdemo'>
+	<!-- Inherit the core Web Toolkit stuff. -->
+	<!-- <inherits name='com.google.gwt.user.User' /> -->
+	<inherits name='com.sencha.gxt.ui.GXT' />
+	<inherits name='com.sencha.gxt.theme.blue.Blue'/>
+	<inherits name="com.greenlabs.layoutdemo.core.core"/>
+
+	<!--<set-property name="gxt.user.agent" value="ie9, gecko1_9, safari5, chrome, 
+		opera"/> -->
+
+	<!-- <add-linker name="xsiframe"/> <set-configuration-property name="devModeRedirectEnabled" 
+		value="true"/> -->
+
+	<!-- merge gecko1_9, safar5, and chrome into one permutation -->
+	<!--<collapse-property name="gxt.user.agent" values="gecko1_9, chrome"/> -->
+
+	<!-- merge all operating system permutations -->
+	<!-- <collapse-property name="user.agent.os" values="*" /> -->
+	<collapse-all-properties />
+
+	<!-- Inherit the default GWT style sheet. You can change -->
+	<stylesheet src="reset.css" />
+	<!-- the theme of your GWT application by uncommenting -->
+	<!-- any one of the following lines. -->
+	<!-- <inherits name='com.google.gwt.user.theme.standard.Standard' /> -->
+	<!-- <inherits name='com.google.gwt.user.theme.chrome.Chrome'/> -->
+	<!-- <inherits name='com.google.gwt.user.theme.dark.Dark'/> -->
+
+	<!-- <extend-property name="gwt.logging.logLevel" value="ALL"/> <extend-property 
+		name="gwt.logging.enabled" value="TRUE"/> <extend-property name="gwt.logging.popupHandler" 
+		value="ENABLED"/> -->
+
+	<!-- Other module inherits -->
+
+	<!-- Specify the app entry point class. -->
+	<entry-point class='com.greenlabs.layoutdemo.web.client.AppModule' />
+
+	<!-- Specify the paths for translatable code -->
+	<source path='client' />
+
+
+</module>
+

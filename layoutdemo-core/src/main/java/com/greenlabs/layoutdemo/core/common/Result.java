@@ -12,6 +12,14 @@ public class Result implements Serializable {
     public static final String DELETE_SUCCESS = "Data berhasil dihapus";
     public static final String DB_EXCEPTION = "Database bermasalah";
 
+    @Override
+    public String toString() {
+        return "Result{" +
+                "id=" + id +
+                ", message='" + message + '\'' +
+                '}';
+    }
+
     private Long id;
     private String message;
 

@@ -3,7 +3,7 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>layout-demo</artifactId>
+        <artifactId>layoutdemo</artifactId>
         <groupId>com.greenlabs</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
@@ -23,6 +23,12 @@
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>com.greenlabs</groupId>
+            <artifactId>layoutdemo-core</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <type>jar</type>
+        </dependency>
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
@@ -94,12 +100,14 @@
                 <execution>
                     <goals>
                         <goal>compile</goal>
-                        <goal>run</goal>
                     </goals>
                 </execution>
             </executions>
             <configuration>
-                <module>com.greenlabs.layoutdemo.web.View</module>
+                <compileSourcesArtifacts>
+                    <compileSourcesArtifact>com.greenlabs:layoutdemo-core</compileSourcesArtifact>
+                </compileSourcesArtifacts>
+                <module>com.greenlabs.layoutdemo.web.AppModule</module>
                 <runTarget>layoutdemo.html</runTarget>
                 <strict>true</strict>
                 <hostedWebapp>${webappDirectory}</hostedWebapp>
@@ -109,8 +117,12 @@
                 </extraJvmArgs>
                 <disableRunAsync>true</disableRunAsync>
                 <logLevel>INFO</logLevel>
-                <style>PRETTY</style>
+                <style>OBF</style>
                 <localWorkers>4</localWorkers>
+                <draftCompile>true</draftCompile>
+                <mode>htmlunit</mode>
+                <copyWebapp>true</copyWebapp>
+
             </configuration>
         </plugin>
         <plugin>
@@ -186,6 +198,7 @@
                 <directory>src/main/java</directory>
                 <includes>
                     <include>**/client/*.java</include>
+                    <include>**/core/**/*.java</include>
                     <include>**/*.gwt.xml</include>
                 </includes>
             </resource>

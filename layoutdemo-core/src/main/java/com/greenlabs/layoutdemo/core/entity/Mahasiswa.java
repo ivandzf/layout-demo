@@ -15,6 +15,21 @@ public class Mahasiswa extends BaseEntity implements Serializable{
         return NIM;
     }
 
+    public Mahasiswa() {
+    }
+
+    @Override
+
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("Mahasiswa{");
+        sb.append("ID='").append(getId()).append('\'');
+        sb.append(", NIM='").append(NIM).append('\'');
+        sb.append(", Nama='").append(Nama).append('\'');
+        sb.append(", Jurusan='").append(Jurusan).append('\'');
+        sb.append('}');
+        return sb.toString();
+    }
+
     public void setNIM(String NIM) {
         this.NIM = NIM;
     }

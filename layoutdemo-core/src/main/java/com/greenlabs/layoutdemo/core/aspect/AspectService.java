@@ -36,7 +36,7 @@ public class AspectService {
     @Around("execution(* com.greenlabs.layoutdemo.core.service.*.delete(..))")
     public Result processDeleteTransaction(ProceedingJoinPoint joinPoint) throws Throwable {
         AppCore.getLogger(this).info("***AspectJ*** delete is catch !! intercepted : "+joinPoint.getSignature());
-        return new Result(validateSaveMethod(joinPoint));
+        return new Result(validateDeleteMethod(joinPoint));
     }
 
     public String validateDeleteMethod(ProceedingJoinPoint joinPoint) throws Throwable {

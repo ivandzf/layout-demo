@@ -17,4 +17,6 @@ public interface BaseDAO<T> {
 
     List<T> find(T entity, Integer offset, Integer limit);
 
+    int count(T param);
+
 }

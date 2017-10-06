@@ -64,10 +64,10 @@ public class MahasiswaDAOImpl implements MahasiswaDAO {
 
     @Override
     public Mahasiswa findById(Long id) {
-        String sql = "SELECT * FROM " + Table.MASTER_MAHASISWA + " a WHERE a.id?";
+        String sql = "SELECT * FROM " + Table.MASTER_MAHASISWA + " a WHERE a.id=?";
         try {
             return jdbcTemplate.queryForObject(sql, new MahasiswaRowMapper(), id);
-        } catch (EmptyResultDataAccessException e) {
+        } catch (EmptyResultDataAccessException ignored) {
 
         }
         return null;
@@ -85,12 +85,24 @@ public class MahasiswaDAOImpl implements MahasiswaDAO {
         return jdbcTemplate.query(sql,params.toArray(), new MahasiswaRowMapper());
     }
 
+    @Override
+    public int count(Mahasiswa param) {
+        String sql = "SELECT COUNT(id) FROM " + Table.MASTER_MAHASISWA + " WHERE 1 = 1";
+        List<Object> params = new ArrayList<>();
+        if(param.getNIM() != null){
+            params.add("%" + param.getNIM() + "%");
+            sql += " AND nim LIKE ?";
+        }
+        return jdbcTemplate.queryForObject(sql, params.toArray(), Integer.class);
+    }
+
     class MahasiswaRowMapper implements RowMapper<Mahasiswa>{
 
         @Override
         public Mahasiswa mapRow(ResultSet resultSet, int i) throws SQLException {
             Mahasiswa mahasiswa = new Mahasiswa();
             mahasiswa.setId(resultSet.getLong("id"));
+            mahasiswa.setNIM(resultSet.getString("nim"));
             mahasiswa.setNama(resultSet.getString("nama"));
             mahasiswa.setJurusan(resultSet.getString("jurusan"));
             mahasiswa.setCreatedTime(resultSet.getTimestamp("created_time"));
